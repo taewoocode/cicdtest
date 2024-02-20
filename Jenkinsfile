@@ -18,8 +18,7 @@ pipeline {
             steps {
                 sh '''
                 kubectl create deployment pl-bulk-prod --image=taewoocode/cicdtest:green
-                kubectl expose deployment pl-bulk-prod --type=LoadBalancer --port=80 \
-                                                       --target-port=80 --name=pl-bulk-prod
+                kubectl expose deployment pl-bulk-prod --type=LoadBalancer --port=80 --target-port=80 --name=pl-bulk-prod
                 '''
             }
         }
