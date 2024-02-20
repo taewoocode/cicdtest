@@ -10,7 +10,7 @@ pipeline {
             steps {
                 sh '''
                 sudo docker build -t taewoocode/cicdtest:green .
-                sudo docker push taewoocode/cicdtest
+                sudo docker push taewoocode/cicdtest:green
                 '''
             }
         }
